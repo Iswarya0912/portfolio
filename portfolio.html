@@ -4,66 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iswarya B. Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     /* Global Styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', sans-serif;
+      background-color: #000010;
+      color: #fff;
       line-height: 1.6;
-      color: #333;
-      background-color: #f7f9fc;
+      overflow-x: hidden;
     }
-    a {
-      text-decoration: none;
-      color: #4CAF50;
-      transition: color 0.3s;
+    a { color: #00ffcc; text-decoration: none; transition: 0.3s; }
+    a:hover { color: #00ffff; }
+
+    /* CSS Starry Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background:
+        radial-gradient(white 1px, transparent 1px) 0 0,
+        radial-gradient(white 1px, transparent 1px) 50px 50px;
+      background-size: 50px 50px;
+      opacity: 0.3;
+      z-index: -1;
     }
-    a:hover {
-      color: #388E3C;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+
+    section { max-width: 1000px; margin: auto; padding: 60px 20px; }
     h2 {
-      color: #4CAF50;
+      color: #00ffcc;
       margin-bottom: 20px;
       font-weight: 700;
-      border-bottom: 2px solid #4CAF50;
+      border-bottom: 2px solid #00ffcc;
       display: inline-block;
       padding-bottom: 5px;
     }
 
     /* Header */
     header {
-      background: #4CAF50;
-      color: #fff;
       text-align: center;
       padding: 80px 20px 60px 20px;
+      background: transparent;
     }
     header h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 3em;
+      color: #00ffcc;
       margin-bottom: 10px;
+      text-shadow: 0 0 10px #00ffcc;
     }
-    header p {
-      font-size: 1.2em;
-    }
-
-    /* Contact */
-    .contact {
-      text-align: center;
-      margin-top: 10px;
-    }
-    .contact a {
-      margin: 0 10px;
-      font-weight: 600;
-    }
+    header p { font-size: 1.2em; color: #a0f0e0; }
+    .contact { margin-top: 10px; }
+    .contact a { margin: 0 10px; font-weight: 600; }
 
     /* Skills */
     .skills ul {
@@ -74,43 +68,41 @@
       padding: 0;
     }
     .skills li {
-      background: #e6f4ea;
-      color: #2e7d32;
+      background: rgba(0, 255, 204, 0.1);
+      border: 1px solid #00ffcc;
       padding: 10px 15px;
       border-radius: 8px;
       font-weight: 600;
+      color: #00ffcc;
+      text-align: center;
+      flex: 1 1 45%;
     }
 
     /* Projects */
-    .projects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
+    .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
     .project-card {
-      background: #fff;
+      background: rgba(0,0,0,0.4);
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border: 1px solid #00ffcc;
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px #00ffcc;
     }
-    .project-card h3 {
-      margin-bottom: 10px;
-      color: #2e7d32;
-    }
+    .project-card h3 { margin-bottom: 10px; color: #00ffcc; }
+
+    /* Timeline */
+    .timeline { list-style: none; padding-left: 0; }
+    .timeline li { margin-bottom: 15px; }
+    .timeline li span { font-weight: 600; color: #00ffcc; }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .projects {
-        grid-template-columns: 1fr;
-      }
-      header h1 {
-        font-size: 2.5em;
-      }
+      .projects { grid-template-columns: 1fr; }
+      .skills li { flex: 1 1 100%; }
+      header h1 { font-size: 2.5em; }
     }
 
   </style>
@@ -119,31 +111,56 @@
 
 <header>
   <h1>Iswarya B.</h1>
-  <p>Engineering Professional | IoT & Embedded Systems | Data Analysis</p>
+  <p>Robotics & Automation | Embedded Systems | Industrial Automation</p>
   <div class="contact">
-    📧 <a href="mailto:your.email@example.com">your.email@example.com</a> | 
-    📞 +91 XXXXX XXXXX | 
-    🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
-    💻 <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+    📧 <a href="mailto:iswargsi@gmail.com">iswargsi@gmail.com</a> | 
+    📞 +91 8098964404 | 
+    🔗 <a href="https://linkedin.com/in/iswarya-b-2ab243288" target="_blank">LinkedIn</a>
   </div>
 </header>
 
 <section>
   <h2>About Me</h2>
   <p>
-    Enthusiastic engineering professional with hands-on experience in IoT, embedded systems, Python-based data analysis, and EV powertrain simulation. Skilled in designing automated data collection systems, performing statistical and machine learning-based analysis, and developing efficient solutions for industrial applications.
+    Enthusiastic and detail-oriented Robotics and Automation student with strong technical expertise in C, C++, Python, LabVIEW, and real-time system integration. Passionate about combining programming with automation and control systems. Seeking an opportunity at a tech-driven organization like Cognizant to apply my skills in embedded systems, software development, and industrial automation.
   </p>
 </section>
 
 <section class="skills">
-  <h2>Skills</h2>
+  <h2>Technical Skills</h2>
   <ul>
-    <li>Python, C, MATLAB</li>
-    <li>LabVIEW, Streamlit, MQTT, MySQL</li>
-    <li>NI-DAQ, Excel Automation</li>
-    <li>Vibration Analysis, FFT, Coherence</li>
-    <li>EV Simulation, IoT, Smart Manufacturing</li>
-    <li>Problem-solving, Teamwork</li>
+    <li>C, C++, Python, Java</li>
+    <li>LabVIEW, MATLAB, Fusion 360, Intouch SCADA, Coppelliasim</li>
+    <li>HTML & CSS</li>
+    <li>MySQL</li>
+    <li>PLC, NI DAQ, SCADA</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Work Experience</h2>
+  <ul class="timeline">
+    <li><span>Master Linque Automation – Intern (Feb 2024 – Mar 2024):</span> Gained hands-on exposure to industrial automation, PLC programming, and real-time workflows.</li>
+    <li><span>SRM Group – Directorate of Research (Jan 2025 – Present):</span> Worked with LabVIEW for sensor integration and real-time monitoring. Explored SCADA systems and industrial data collection.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <ul class="timeline">
+    <li><span>B.E. Robotics and Automation</span> – Easwari Engineering College (2022–2026), CGPA: 8.78</li>
+    <li><span>12th</span> – Vivekananda Matriculation Higher Secondary School, Score: 86.17%</li>
+    <li><span>10th</span> – Vivekananda Matriculation Higher Secondary School, Score: 77.6%</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <ul>
+    <li>NPTEL – Introduction to Industry 4.0 & IIoT (Elite Certificate)</li>
+    <li>NPTEL – Automation in Production Systems and Management (Elite Certificate)</li>
+    <li>CISCO – Certificate in Networking Concepts</li>
+    <li>UR20/30 – e-Learning Certification</li>
   </ul>
 </section>
 
@@ -151,39 +168,35 @@
   <h2>Projects</h2>
   <div class="projects">
     <div class="project-card">
-      <h3>Vibration Data Logging & Analysis</h3>
-      <p>Real-time vibration logging using NI DAQ and Python. Automated Excel batch logging via MQTT/WebSocket, feature extraction, and ML-based defect detection.</p>
+      <h3>AGV – Autonomous Guided Vehicle</h3>
+      <p>Designed a robot that follows predefined paths using sensor feedback. Enabled real-time data processing to enhance navigation and avoid obstacles.</p>
     </div>
     <div class="project-card">
-      <h3>EV Powertrain Simulation</h3>
-      <p>Simulated realistic EV battery pack dynamics with SOC, efficiency, and thermal modeling. Performed physics-based powertrain calculations for performance prediction.</p>
+      <h3>Detection Robot</h3>
+      <p>Built a robot with metal detection capabilities for security and inspection. Improved detection accuracy through advanced signal processing.</p>
     </div>
     <div class="project-card">
-      <h3>Expense Tracker Web App</h3>
-      <p>Developed Python Streamlit app for tracking, categorizing, and managing expenses with secure login and dynamic report generation.</p>
+      <h3>Hexabot Simulation</h3>
+      <p>Simulated a hexapod robot using Coppelliasim. Developed and tested gait patterns for optimized mobility and stability.</p>
     </div>
     <div class="project-card">
-      <h3>C Programming Systems</h3>
-      <p>Built Dynamic Configuration Loader, Hospital Patient Management, and Student Records Management systems using linked lists, files, and error handling.</p>
+      <h3>LabVIEW-Based Sensor Monitoring</h3>
+      <p>Integrated Arduino, NI DAQ, and sensors with LabVIEW. Built a real-time monitoring dashboard for industrial applications.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Education</h2>
-  <p>B.E. in [Your Branch], [Your University], [Year of Passing]</p>
+  <h2>Languages</h2>
+  <p>English – Fluent | Tamil – Native</p>
 </section>
 
 <section>
-  <h2>Certifications</h2>
-  <p>NPTEL – Introduction to Industry 4.0 & Industrial IoT</p>
-</section>
-
-<section>
-  <h2>Achievements & Interests</h2>
+  <h2>Additional Information</h2>
   <ul>
-    <li>Developed real-time industrial data analysis applications for smart manufacturing.</li>
-    <li>Passionate about IoT, automation, and predictive analytics.</li>
+    <li>Keen interest in ROS (Robot Operating System) and robotic simulations.</li>
+    <li>Strong teamwork, adaptability, and problem-solving skills.</li>
+    <li>Eager to contribute to dynamic software and automation environments.</li>
   </ul>
 </section>
 
